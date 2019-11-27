@@ -7,6 +7,7 @@ class User(object):
 		self.password=password
 		self.friends_list=[]
 
+		users.append(self)
 
 	def add_friend(self,email):	
 		self.friends_list.append(email)
@@ -30,6 +31,7 @@ class User(object):
 
 class Post(object):
 	def __init__(self, likes, text, author):
+		posts_list.append()
 		self.likes=0
 		self.comments=[]
 		self.text=text
@@ -45,10 +47,18 @@ class Post(object):
 
 class Comment(Post):
 	def __init__(self, like):
-		self.like=like
+		self.like=0
 		self.reply=[]
 
+	def like_comment(self, like):
+		self.like=+1
+		print(email + ' liked your comment.')
 
+	def reply_to(self, text):
+		self.reply.append(text)
+		print(email + ' replied to your comment ' + text)
+
+'''
 user1=User('maradona', 'maradona40@gmail.com', 1948)
 user2=User('jobani', 'jobani39@gmail.com', 1949)
 
@@ -60,7 +70,7 @@ user2.new_post('had fun training the kids team yesterday. keep going!')
 
 user1.get_userinfo()
 user2.get_userinfo()
-
+'''
 
 class Post(object):
 	def __init__(self, likes, text):
@@ -75,6 +85,14 @@ class Post(object):
 	def comment_post(self, text):
 		self.comments.append(text)
 		print(email + ' commented on your post ' + text )
+
+print('log in')
+email=input('your email')
+password=input('your password')
+for user in users():
+	if email == self.email:
+		if password == self.password:
+			loged_in=user
 
 
 
