@@ -72,27 +72,27 @@ user1.get_userinfo()
 user2.get_userinfo()
 '''
 
-class Post(object):
-	def __init__(self, likes, text):
-		self.likes=0
-		self.comments=[]
-		self.text=text
+while 0==0:
+	option=input('what would you like to do?')
+	if option=='log in':
+		email=input('your email')
+		password=input('your password')
+		for new_user in users:
+			if email == new_user.email:
+				if password == new_user.password:	
+					print('you are in')
+				
+				else:
+					print('your password is wrong')
+			else:
+				print('your email is wrong')
 
-	def like_post(self,email):
-		self.like=+1
-		print(email + ' liked your post.')
 
-	def comment_post(self, text):
-		self.comments.append(text)
-		print(email + ' commented on your post ' + text )
-
-print('log in')
-email=input('your email')
-password=input('your password')
-for user in users():
-	if email == self.email:
-		if password == self.password:
-			loged_in=user
+	elif option=='sign up':
+		email=input('your email')
+		password=input('your password')
+		name=input('your name')
+		new_user=User(name, email, password)
 
 
 
