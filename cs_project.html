@@ -1,0 +1,28 @@
+<html>
+<title> cs project </title>
+
+</head>
+
+<body>
+	<h1 id= "title">choose your adventure!</h1>
+	<p id='text'>you're one a different planet with your friends for an experiment. you have to do there some tasks and work but you see some strange things happened and you have to decide what should you do.</p>
+	 <button id= 'right' onclick="right()">start</button> 
+	 <button id= 'left' onclick="left()"></button> 
+
+
+	<script>
+		var count=0
+
+		function right(){
+			if(count===0){
+
+		document.getElementById('text').innerHTML="you arrived to the planet and woke up to the day after' then you start to work and you noticed your friend is missing will you go looking for him?";} 
+		document.getElementById('right').innerHTML="no, I won't"
+		document.getElementById('left').innerHTML="yes, I will"
+
+	</script>
+
+
+
+</body>
+</html>
