@@ -1,28 +1,158 @@
 <html>
 <title> cs project </title>
+	<link rel="stylesheet" type="text/css" href="cs_project.css">
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet"> 
+
 
 </head>
 
 <body>
-	<h1 id= "title">choose your adventure!</h1>
-	<p id='text'>you're one a different planet with your friends for an experiment. you have to do there some tasks and work but you see some strange things happened and you have to decide what should you do.</p>
-	 <button id= 'right' onclick="right()">start</button> 
-	 <button id= 'left' onclick="left()"></button> 
+	<div id="style"> 
+		<h1 id= "title">choose your adventure!</h1>
+		<p id='text'>you're one a different planet with your friends for an experiment. you have to do there some tasks and work but you see some strange things happened and you have to decide what should you do.</p>
+		 <button id="start" onclick="start()">start</button>
+		 <button id= 'left' onclick="left_side()"></button> 
+		 <button id= 'right' onclick="right_side()"></button> 
+	</div>
+
 
 
 	<script>
-		var count=0
-
-		function right(){
-			if(count===0){
-
-		document.getElementById('text').innerHTML="you arrived to the planet and woke up to the day after' then you start to work and you noticed your friend is missing will you go looking for him?";} 
-		document.getElementById('right').innerHTML="no, I won't"
-		document.getElementById('left').innerHTML="yes, I will"
-
+	function start(){
+		document.getElementById('text').innerHTML="you arrived to the planet and woke up to the day after, then you start to work and you noticed your friend is missing will you go looking for him?";
+		document.getElementById('start').innerHTML="";
+		document.getElementById('right').innerHTML="yes, I will";
+		document.getElementById('left').innerHTML="no, I won't";
+	}
+	var count=1
+	function right_side(){
+		if (count===1){
+			document.getElementById('text').innerHTML="you got to your room and a bottle with green liquid next to his bed and some foot steps. you would...";
+			document.getElementById('right').innerHTML="follow the foot steps";
+			document.getElementById('left').innerHTML="check the bottle";
+			count=2
+	}
+		else if (count===2){
+			document.getElementById('text').innerHTML='you are following the footsteps and get to the cafeteria of your camp and see that all the plates are broken. the glass fragments are leading to the stairs to the basement. would you...';
+			document.getElementById('right').innerHTML='call your other friends to come with you';
+			document.getElementById('left').innerHTML='go down the stairs by yourself';
+			count=4
+	}
+		else if (count===4){
+			document.getElementById('text').innerHTML="you and your friends go down the stairs and find your friend unconscious. you take him to your camp's hospital and help him get better. he tells you that aliens took him and the only way to run away is drinking the megical green liquid and get sick, but you'll be able to fly back because the aliens won't be able to take you because of the megical liquid. would you...";
+			document.getElementById('right').innerHTML='not drink';
+			document.getElementById('left').innerHTML='drink';
+			count=8
+	}
+		else if (count===8){
+			document.getElementById('text').innerHTML="the aliens took you and you are dead.the end.";
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}
+		else if (count===3){
+			document.getElementById('text').innerHTML="you keep working on your experiment until it's dark outside and you are going to your room and find a broken bottle with green liquid on the floor. you want to check what is this liquid. would you...";
+			document.getElementById('right').innerHTML="test the liquid in the lab";
+			document.getElementById('left').innerHTML="touch the liquid";
+			count=6
+	}
+		else if (count===6){
+			document.getElementById('text').innerHTML="the lab is closed at night time so you decide to do it in the morning. when you wake up, you realize your friend back in his bed like nothing happened. would you suspect?";
+			document.getElementById('right').innerHTML="yes";
+			document.getElementById('left').innerHTML="no";
+			count=12
+	}		
+		else if (count===12){
+			document.getElementById('text').innerHTML="your friend and his new aliens friends paid attention you are suspect them then they take you too. the end.";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="";
+	}	
+		else if (count===5){
+			document.getElementById('text').innerHTML="you looking around for your friend and saw your other friends that looking for him too. you are looking for him together until you understand that he lost and come back to earth without him. the end." ;
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}	
+		else if (count===11){
+			document.getElementById('text').innerHTML= "you are not strong enough to fight them and they took you. the end." ;
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}
+		else if (count===16){
+			document.getElementById('text').innerHTML= "you didn't get enough time to get the spaceship and the aliens took you. the end.";
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}
+		else if (count===7){
+			document.getElementById('text').innerHTML="you die from heart attack. the end.";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="";
+	}
+	}
+	function left_side(){
+		if (count===1){
+			document.getElementById('text').innerHTML="you continue working and then you see little sparks from the electricity cabinet. you would...";
+			document.getElementById('right').innerHTML="wait for someone to fix it";
+			document.getElementById('left').innerHTML="check it yourself";
+			count=3
+	}
+		else if (count===3){
+			document.getElementById('text').innerHTML="when you are checking the electricity cabinet you see that something sharp cut it, definatly not by itself. after you fixed it you see sharp subject next to your working-table so you pick it up and check it. you see blood on it. would you panic?";
+			document.getElementById('right').innerHTML="yes";
+			document.getElementById('left').innerHTML="no";
+			count=7
+	}
+		else if (count===7){
+			document.getElementById('text').innerHTML="you keep working on your project withour your partner. the end.";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="";
+	}
+		else if (count===2){
+			document.getElementById('text').innerHTML="you are taking the bottle to the lab and test the liquid in some machines and you found out that the liquidis a poisen that might be found in the planet's river. would you..." ;
+			document.getElementById('right').innerHTML='keep searching for your friend';
+			document.getElementById('left').innerHTML='go to the river';
+			count=5
+	}
+		else if (count===5){
+			document.getElementById('text').innerHTML="you go to the river and see aliens spaceship. they see you and start runing toward you. would you..." ;
+			document.getElementById('right').innerHTML='fight them';
+			document.getElementById('left').innerHTML='run away';
+			count=11
+	}
+		else if (count===11){
+			document.getElementById('text').innerHTML= "you run toward your spaceship. then, you see your friend calling for help. would you..." ;
+			document.getElementById('right').innerHTML='help him';
+			document.getElementById('left').innerHTML='run away';
+			count=16
+	}
+		else if (count===16){
+			document.getElementById('text').innerHTML= "you get successfuly to earth alone(without your frinds)the end.";
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}
+		else if (count===6){
+			document.getElementById('text').innerHTML="the liquid absorbed into your skin, you lose you breath and die. the end.";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="";
+	}	
+		else if (count===12){
+			document.getElementById('text').innerHTML="you are keep working on your project and the aliens take you too. the end.";
+			document.getElementById('right').innerHTML="";
+			document.getElementById('left').innerHTML="";
+	}		
+		else if (count===4){
+			document.getElementById('text').innerHTML="you find your friend unconscious down the stairs and try too talk to him. he didn't answered and it took much time to talk to him that the aliens took you both. the end.";
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}
+		else if (count===8){
+			document.getElementById('text').innerHTML="you drink the liquid and got sick but you got successfuly to earth.the end.";
+			document.getElementById('right').innerHTML='';
+			document.getElementById('left').innerHTML='';
+	}
+	}
 	</script>
 
-
+ 
 
 </body>
 </html>

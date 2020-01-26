@@ -1,0 +1,28 @@
+body {
+	background-image: url("pink_planets-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+p {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 30px;
+	font-family: 'Sigmar One', cursive;
+
+}
+
+h1 {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 50px;
+    font-family: 'Shadows Into Light', cursive;
+
+
+}
+
+#style{text-align: center;}
+#start{background-color: #ff4d94; font-size: 30px; font-family: 'Shadows Into Light', cursive}
+#right{background-color: #ff4d94; font-size: 30px; font-family: 'Shadows Into Light', cursive}
+#left{background-color: #ff4d94; font-size: 30px; font-family: 'Shadows Into Light', cursive}
